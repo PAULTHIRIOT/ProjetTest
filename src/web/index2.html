@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Multiplication</h1>
+<p>
+<form>
+    <input type="radio" id="+" name="signe" value="+">
+    <label for="+">+</label><br>
+    <input type="radio" id="-" name="signe" value="-">
+    <label for="-">-</label><br>
+    <input type="radio" id="*" name="signe" value="*">
+    <label for="*">*</label>
+</form>
+</p>
+<p>
+    <label for="chifre1">Chifre 1 :</label>
+    <input id="chifre1"/>
+</p>
+<p>
+    <label for="chifre2">Chifre 2 :</label>
+    <input id="chifre2"/>
+
+</p>
+<p>
+    <button onclick="multiplier()">Multiplier</button>
+
+</p>
+<span id="maSaisie"></span>
+</body>
+</html>
+
+<script>
+    function multiplier() {
+        let value1 = document.getElementById("chifre1").value;
+        let value2 = document.getElementById("chifre2").value;
+        document.getElementById("maSaisie").innerHTML = value1 * value2
+        let signe = document.querySelector('input[name=signe]:checked').value;
+        if (signe == "+"){
+            document.getElementById("maSaisie").innerHTML = value1 + value2
+        }
+        if (signe == "-"){
+            document.getElementById("maSaisie").innerHTML = value1 - value2
+        }
+        if (signe == "*"){
+            document.getElementById("maSaisie").innerHTML = value1 * value2
+        }
+
+
+    }
+
+</script>
