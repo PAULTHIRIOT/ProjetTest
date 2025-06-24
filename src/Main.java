@@ -18,6 +18,7 @@ public class Main {
 
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
         System.out.println("Enter username");
+        System.out.println("Je sais pas");
 
         String userName = myObj.nextLine();  // Read user input
 
