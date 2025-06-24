@@ -26,7 +26,7 @@
 
 </p>
 <p>
-    <button onclick="multiplier()">Multiplier</button>
+    <button onclick="multiplier()">Calculer</button>
 
 </p>
 <span id="maSaisie"></span>
@@ -40,13 +40,13 @@
         document.getElementById("maSaisie").innerHTML = value1 * value2
         let signe = document.querySelector('input[name=signe]:checked').value;
         if (signe == "+"){
-            document.getElementById("maSaisie").innerHTML = value1 + value2
+            document.getElementById("maSaisie").innerHTML = Number(value1) + Number(value2)
         }
         if (signe == "-"){
-            document.getElementById("maSaisie").innerHTML = value1 - value2
+            document.getElementById("maSaisie").innerHTML = Number(value1) - Number(value2)
         }
         if (signe == "*"){
-            document.getElementById("maSaisie").innerHTML = value1 * value2
+            document.getElementById("maSaisie").innerHTML = Number(value1) * Number(value2)
         }
 
 
