@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chat</h1>
+    <p>Un texte</p>
+
+    <a href="http://youtube.com">Un lien hypertext</a>
+
+    <p>
+        <label for="input">Mon nom :</label>
+        <input id="input" width="100"/>
+    </p>
+
+    <p>
+        <label for="select">Marchandises : </label>
+        <select id="select">
+            <option>Café</option>
+            <option>Croissant</option>
+            <option>Chocolat</option>
+            <option>Salade</option>
+        </select>
+    </p>
+
+    <form>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I have a boat</label>
+    </form>
+
+    <button onclick="clickValider()">Valider</button>
+
+
+    <p style="width: 60px">
+        <span id="maSaisie"></span>
+    </p>
+</body>
+</html>
+
+
+<script>
+
+    function clickValider() {
+        let value = document.getElementById("input").value;
+        let valueCroissant = document.getElementById("select").value;
+        console.log(value)
+        console.error(value)
+
+        document.getElementById("maSaisie").innerHTML = value + " " + valueCroissant;
+        document.getElementById("maSaisie").style.backgroundColor = 'red';
+        // document.getElementById("maSaisie").style.padding = '20%';
+    }
+</script>
